@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>COOPEC 360 graus</title>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+<style> @-ms-viewport { width: device-width; } </style>
+<link rel="stylesheet" href="vendor/reset.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="multiple-scenes view-control-buttons">
+
+<div id="pano"></div>
+
+<div id="sceneList">
+  <ul class="scenes">
+    
+      <a href="javascript:void(0)" class="scene" data-id="0-01---entrada-principal-praa">
+        <li class="text">01 - Entrada Principal Praça</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="1-02---entrada-principal">
+        <li class="text">02 - Entrada Principal</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="2-03---entrada-principal-1">
+        <li class="text">03 - Entrada Principal 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="3-04---ensimo-mdio">
+        <li class="text">04 - Ensimo Médio</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="4-05---ensimo-mdio-1">
+        <li class="text">05 - Ensimo Médio 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="5-06---ensimo-mdio-2">
+        <li class="text">06 - Ensimo Médio 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="6-07---ensimo-mdio-3">
+        <li class="text">07 - Ensimo Médio 3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="7-08---ensimo-mdio-4">
+        <li class="text">08 - Ensimo Médio 4</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="8-09---ensimo-mdio-5">
+        <li class="text">09 - Ensimo Médio 5</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="9-10---lousa-digital">
+        <li class="text">10 - Lousa Digital</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="10-11---lousa-digital-1">
+        <li class="text">11 - Lousa Digital 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="11-12---acesso-ensino-mdio-1">
+        <li class="text">12 - Acesso Ensino médio 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="12-13---laboratrio-informtica">
+        <li class="text">13 - Laboratório Informática</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="13-14---lab-informtica-1">
+        <li class="text">14 - Lab. Informática 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="14-15---rea-cantina">
+        <li class="text">15 - Área Cantina</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="15-16---externo-labs">
+        <li class="text">16 - Externo Labs</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="16-17---acesso-labs">
+        <li class="text">17 - Acesso Labs</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="17-18---acesso-labs-1">
+        <li class="text">18 - Acesso Labs 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="18-19---acesso-labs-2">
+        <li class="text">19 - Acesso Labs 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="19-20---laboratrio-de-fsica">
+        <li class="text">20 - Laboratório de Física</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="20-21---laboratrio-de-biologia">
+        <li class="text">21 - Laboratório de Biologia</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="21-22---lab-biologia-1">
+        <li class="text">22 - Lab. Biologia 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="22-23---laboratrio-de-qumica">
+        <li class="text">23 - Laboratório de Química</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="23-24---rea-externa">
+        <li class="text">24 - Área Externa</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="24-25---rea-externa-poli">
+        <li class="text">25 - Área Externa Poli</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="25-26---acesso-ensino-mdio">
+        <li class="text">26 - Acesso Ensino Médio</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="26-27---anfiteatro">
+        <li class="text">27 - Anfiteatro</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="27-28---anfiteatro-1">
+        <li class="text">28 - Anfiteatro 1</li>
+      </a>
+    
+  </ul>
+</div>
+
+<div id="titleBar">
+  <h1 class="sceneName"></h1>
+</div>
+
+<a href="javascript:void(0)" id="autorotateToggle">
+  <img class="icon off" src="img/play.png">
+  <img class="icon on" src="img/pause.png">
+</a>
+
+<a href="javascript:void(0)" id="fullscreenToggle">
+  <img class="icon off" src="img/fullscreen.png">
+  <img class="icon on" src="img/windowed.png">
+</a>
+
+<a href="javascript:void(0)" id="sceneListToggle">
+  <img class="icon off" src="img/expand.png">
+  <img class="icon on" src="img/collapse.png">
+</a>
+
+<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+  <img class="icon" src="img/up.png">
+</a>
+<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+  <img class="icon" src="img/down.png">
+</a>
+<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+  <img class="icon" src="img/left.png">
+</a>
+<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+  <img class="icon" src="img/right.png">
+</a>
+<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+  <img class="icon" src="img/plus.png">
+</a>
+<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+  <img class="icon" src="img/minus.png">
+</a>
+
+<script src="vendor/screenfull.min.js" ></script>
+<script src="vendor/bowser.min.js" ></script>
+<script src="vendor/marzipano.js" ></script>
+
+<script src="data.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
